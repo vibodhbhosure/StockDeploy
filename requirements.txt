@@ -7,3 +7,5 @@ keras-models==0.0.7
 streamlit==1.8.1
 sklearn==0.0
 yfinance==0.1.70
+tensorflow==2.8.0
+tensorflow-gpu==2.8.0
