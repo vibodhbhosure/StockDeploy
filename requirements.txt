@@ -1,2 +1,9 @@
 plotly==5.10.0
 tenacity==8.1.0
+matplotlib==3.5.1
+pandas-datareader==0.10.0
+keras==2.8.0
+keras-models==0.0.7
+streamlit==1.8.1
+sklearn==0.0
+yfinance==0.1.70
