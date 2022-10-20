@@ -11,6 +11,8 @@ st.title('Stock Trend Prediction') #Title for streamlit page
 
 user_input = st.text_input("Enter Stock Ticker", "AAPL") #take input in text-box
 
+st.subheader(user_input)
+
 #start = '2010-01-01'
 start = str(yf.Ticker(user_input).history(period='max').reset_index()['Date'][0])[:10] #Extract start date of the stock from Yahoo
 #end = '2014-02-16'
