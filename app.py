@@ -19,7 +19,7 @@ start_date = str(yf.Ticker(user_input).history(period='max').reset_index()['Date
 end_date = datetime.today().strftime("%Y-%m-%d") #Today's date as End date
 
 # df = data.DataReader(user_input, 'yahoo', start, end) #Take data of stock from yahoo in DataFrame
-df = data.DataFrame(tf.Ticker(user_input).history(start=start_date, end=end_date))
+df = data.DataFrame(yf.Ticker(user_input).history(start=start_date, end=end_date))
 
 df = df.reset_index() #Reset Index of Dataframe to remove date as index and put 1,2,3,4...
 
