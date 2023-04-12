@@ -22,11 +22,10 @@ end_date = datetime.today().strftime("%Y-%m-%d") #Today's date as End date
 df = data.DataFrame(yf.Ticker(user_input).history(start=start_date, end=end_date))
 
 df = df.reset_index() #Reset Index of Dataframe to remove date as index and put 1,2,3,4...
-
-st.subheader(str(start_date)+" To "+str(end_date)) #Put subheading as Start - End
-newd = df.dtypes.astype(str)
-# st.write(newd.describe()) #Put the table of Data Frame in StreamLit
-st.write(newd.head())
+try:
+    st.subheader(str(start_date)+" To "+str(end_date)) #Put subheading as Start - End
+    st.write(df.describe()) #Put the table of Data Frame in StreamLit
+except:pass
 
 st.subheader('Closing Price vs Time Chart') #Sub-Heading
 fig = plt.figure(figsize=(12,6)) #create and set dimensions for the figure
