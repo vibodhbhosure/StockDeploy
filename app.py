@@ -1,11 +1,11 @@
 from datetime import datetime
 import numpy
 import matplotlib.pyplot as plt
-import pandas_datareader as data
 from keras.models import load_model
 import streamlit as st
 from sklearn.preprocessing import MinMaxScaler
 import yfinance as yf
+import pandas as data
 
 st.title('Stock Trend Prediction') #Title for streamlit page
 
@@ -14,14 +14,16 @@ user_input = st.text_input("Enter Stock Ticker", "AAPL") #take input in text-box
 st.subheader(user_input)
 
 #start = '2010-01-01'
-start = str(yf.Ticker(user_input).history(period='max').reset_index()['Date'][0])[:10] #Extract start date of the stock from Yahoo
+start_date = str(yf.Ticker(user_input).history(period='max').reset_index()['Date'][0])[:10] #Extract start date of the stock from Yahoo
 #end = '2014-02-16'
-end = datetime.today().strftime("%Y-%m-%d") #Today's date as End date
+end_date = datetime.today().strftime("%Y-%m-%d") #Today's date as End date
 
-df = data.DataReader(user_input, 'yahoo', start, end) #Take data of stock from yahoo in DataFrame
+# df = data.DataReader(user_input, 'yahoo', start, end) #Take data of stock from yahoo in DataFrame
+df = data.DataFrame(tf.Ticker(user_input).history(start=start_date, end=end_date))
+
 df = df.reset_index() #Reset Index of Dataframe to remove date as index and put 1,2,3,4...
 
-st.subheader(str(start)+" To "+str(end)) #Put subheading as Start - End
+st.subheader(str(start_date)+" To "+str(end_date)) #Put subheading as Start - End
 st.write(df.describe()) #Put the table of Data Frame in StreamLit
 
 st.subheader('Closing Price vs Time Chart') #Sub-Heading
