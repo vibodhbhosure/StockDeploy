@@ -14,57 +14,78 @@ This is a web application designed to predict the trends of a stock price based 
 ## Project Special Attribute Information:
 This libraries are to be installed or be present in order to make 
 it work
+
 • Plotly
+
 • Tenacity
+
 • Matplotlib
+
 • Pandas-datareader
+
 • Keras
+
 • Streamlit
+
 • Sklearn
+
 • Yfinance
+
 • Tensorflow
+
+
 • Tensorflow-gpu
+
 About the requirements functions
+
 • (1) Plotlys Python graphing library makes interactive, 
 publication-quality graphs. Examples of how to make line 
 plots, scatter plots, area charts, bar charts, error bars, box 
 plots, histograms, heatmaps, subplots, multiple-axes, polar 
 charts, and bubble charts.
+
 • (2) Tenacity is an Apache general-purpose retrying library, 
 written in Python, to simplify the task of adding retry 
 behavior to just about anything. simplest use case is 
 retrying a flaky function whenever an Exception occurs 
 until a value is returned.
+
 • (3) Matplotlib is a comprehensive library for creating static, 
 animated, and interactive visualizations in Python. 
 Matplotlib makes easy things easy and hard things 
 possible.
+
 • (4) Pandas pandas is a Python package providing fast, 
 flexible, and expressive data structures designed to make 
 working with “relational” or “labeled” data both easy and 
 intuitive. It aims to be the fundamental high-level building 
 block for doing practical, real-world data analysis in 
 Python.
+
 • (5) Keras Keras is a minimalist Python library for deep 
 learning that can run on top of Theano or TensorFlow. It 
 was developed to make implementing deep learning 
 models as fast and easy as possible for research and 
 development.
+
 • (6) Streamlit Streamlit is an open source app framework in 
 Python language. It helps us create web apps for data 
 science and machine learning in a short time. It is 
 compatible with major Python libraries such as scikit-
 learn, Keras, PyTorch, SymPy(latex), NumPy, pandas, 
 Matplotlib etc.
+
 • (7) Sklearn Scikit-learn is probably the most useful library 
 for machine learning in Python. The sklearn library 
 contains a lot of efficient tools for machine learning and 
 statistical modeling including classification, regression, 
 clustering and prediction.
+
 • (8) Yfinance Yfinance is a python package that enables us 
 to fetch historical market data from Yahoo Finance API in a 
 Pythonic way. It becomes so easy for all the Python 
 developers to get data with the help of yfinance.
+
 • (9) Tensorflow TensorFlow is a Python-friendly open 
 source library for numerical computation that makes 
 machine learning and developing neural networks faster 
